@@ -1,6 +1,6 @@
 
 var createTFLiteSIMDModule = (function() {
-  var _scriptDir = typeof document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
+  var _scriptDir = import.meta.url;
   
   return (
 function(createTFLiteSIMDModule) {
@@ -13,9 +13,4 @@ var Module=typeof createTFLiteSIMDModule!=="undefined"?createTFLiteSIMDModule:{}
 }
 );
 })();
-if (typeof exports === 'object' && typeof module === 'object')
-  module.exports = createTFLiteSIMDModule;
-else if (typeof define === 'function' && define['amd'])
-  define([], function() { return createTFLiteSIMDModule; });
-else if (typeof exports === 'object')
-  exports["createTFLiteSIMDModule"] = createTFLiteSIMDModule;
+export default createTFLiteSIMDModule;
