@@ -12,6 +12,7 @@ cc_binary(
     "-s USE_PTHREADS=0",
     "-s MODULARIZE=1",
     "-s EXPORT_ES6=1",
+    "-s USE_ES6_IMPORT_META=0",
     "-s EXPORT_NAME=createTFLiteModule",
   ],
   deps = [
@@ -31,6 +32,7 @@ cc_binary(
     "-s USE_PTHREADS=0",
     "-s MODULARIZE=1",
     "-s EXPORT_ES6=1",
+    "-s USE_ES6_IMPORT_META=0",
     "-s EXPORT_NAME=createTFLiteSIMDModule",
   ],
   deps = [
